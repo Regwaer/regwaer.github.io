@@ -127,11 +127,11 @@ function download(filename, text) {
 }
 
 
-NextElement.onclick = function () {
-    // localStorage.setItem('body1',document.getElementById('body').innerHTML)
-    // download('1111.html',document.getElementById('body').innerHTML)
-    console.log(localStorage.getItem('body1'))
-}
+// NextElement.onclick = function () {
+//     // localStorage.setItem('body1',document.getElementById('body').innerHTML)
+//     // download('1111.html',document.getElementById('body').innerHTML)
+//     console.log(localStorage.getItem('body1'))
+// }
 
 
 

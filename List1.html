@@ -18,9 +18,18 @@
 <body class="bg-light text-dark">
     <div class="container w-50 pt-5">
         <h1>Тест №1</h1>
-        <p>Посмотрите внимательно этот тест. Он состоит из букв «Х». На выполнение задания дается десять секунд. Найдите 5  букв «Y» и выделите маркером. </p>
-        <!-- <div class="table-responsive"> -->
-            <table class="table table-borderless" id = "Grid">
+        <p>Посмотрите внимательно этот тест. Он состоит из букв «Х». Найдите 5  букв «Y» и выделите.
+          <br>
+          <b>(Лимит времени на этот тест — 10 секунд).</b>
+        </p>
+        <br>
+        <div class="d-flex justify-content-between p-10" id = "T4Div">
+          <span class = "btn btn-small btn-danger" id = "start">Начать тест</span>
+          <h3 id="timer">10 сек</h3>
+        </div>
+        <br>
+  
+          <table class="table table-borderless ph" id = "Grid">
                 <tbody >
                   <tr>
                     <td>X</td>
@@ -354,12 +363,19 @@
 
             </tbody>
           </table>
-       
-        <button class="btn btn-outline-info w-100 mb-2" id = "Next">Далее</button>
-        
+          <br>
+        <button class="btn btn-outline-info w-100 mb-2 ph" id = "Next">Далее</button>
+     </div>
 
-    </div>
-    <p id="tr"></p>
-    <p id="td"></p>
 </body>
+<style>
+  .letter-spacing-wide {
+      letter-spacing: .10rem;
+  }
+</style>
+<style> 
+.ph {
+  visibility: hidden;
+  }
+</style>
 </html>

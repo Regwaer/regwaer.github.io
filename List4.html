@@ -18,12 +18,19 @@
 <body class="bg-light text-dark">
     <div class="container w-50 pt-5">
         <h1 id = "T4">Тест №4</h1>
-        <p>Сравните данные в правом столбце данных с левым столбцом и отметьте все различия с помощью <span class="d-inline text-bg-warning">желтого маркера</span>. Несоответствия нужно отмечать, как в левом, так и в правом столбце.</p>
-        <p>Время выполнения задания — 2 минуты.</p>
+        <p>Сравните данные в правом столбце данных с левым столбцом и отметьте все различия с помощью <span class="d-inline text-bg-warning">желтого выделения</span>. Несоответствия нужно отмечать, как в левом, так и в правом столбце.
+            <br>
+            <b>(Лимит времени на этот тест — 2 минуты).</b>
+        </p>
+
         <br>
-        <span class = "btn btn-small btn-danger" id = "danger">сбросить выделение</span>
+        <div class="d-flex justify-content-between p-10" id = "T4Div">
+            <span class = "btn btn-small btn-danger" id = "start">Начать тест</span>
+            <h3 id="timer">120 сек</h3>
+        </div>
+        <br>
         <div class="d-flex justify-content-center p-10" id = "T4Div">
-            <p class="fs-6" id = "p1">
+            <p class="fs-6 ph" id = "p1">
                 DYER, ROBERT A      <BR>
                 555-5858            <BR>
                 01/01               <BR>
@@ -59,7 +66,7 @@
                 378 HAMSTER ST      <BR>
                 BARRINGTON, IL 60010<BR>
             </p>
-            <p class="fs-6" id = "p2">
+            <p class="fs-6 ph" id = "p2">
                 DYER, ROBERT A      <BR>
                 555-5888            <BR>
                 01/01               <BR>
@@ -96,11 +103,21 @@
                 BARRNGTON, IL 60010 <BR>
             </p>
         </div>
-        
-        <button class="btn btn-outline-info w-100 mb-2" id = "Next">Далее</button>
-        
+        <br>
+        <button class="btn btn-outline-info w-100 mb-2" id = "endTest">Завершить тест</button>
+        <br>
 
     </div>
     
 </body>
+<style>
+    .letter-spacing-wide {
+        letter-spacing: .10rem;
+    }
+</style>
+<style> 
+.ph {
+    visibility: hidden;
+    }
+</style>
 </html>

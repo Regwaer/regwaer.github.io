@@ -17,7 +17,17 @@
 <body class="bg-light text-dark">
     <div class="container w-50 pt-5">
         <h1>Тест №2</h1>
-        <p>В какой строке символов имеются отклонения от регулярного цикла (от закономерности)? Выделите строку и выделите отклонение желтым маркером. Лимит времени на этот тест — 30 секунд.</p>
+        <p >Выберите строку c отклонением в последовательности чисел.
+          <br>
+          <b>(Лимит времени на этот тест — 30 секунд).</b>
+        </p>
+        <br>
+        <div class="d-flex justify-content-between p-10" id = "T4Div">
+          <span class = "btn btn-small btn-danger" id = "start">Начать тест</span>
+          <h3 id="timer">30 сек</h3>
+        </div>
+        <br>
+        <div class = "ph fs-4" id = "container">
         <div class="form-check">
             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" >
             <label class="form-check-label" for="flexRadioDefault1">
@@ -48,10 +58,23 @@
                 97129712971297129712971297129712
             </label>
           </div>
+          <br>
           <button class="btn btn-outline-info w-100 mb-2" id = "Next">Далее</button>
+        </div>
+
     </div>
 
 
     
 </body>
+<style>
+  .letter-spacing-wide {
+      letter-spacing: .10rem;
+  }
+</style>
+<style> 
+.ph {
+  visibility: hidden;
+  }
+</style>
 </html>

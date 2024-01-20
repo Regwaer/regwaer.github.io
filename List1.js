@@ -1,14 +1,11 @@
 
 const NextElement = document.getElementById('Next')
+const BtmDanger = document.getElementById('start')
 
 NextElement.onclick = function () {
     localStorage.setItem('Grid',document.getElementById('Grid').innerHTML) 
     
     window.location.href = 'List2.html'
-    // return false;
-    //GridElement.style.background = "rgb(255, 0, 0)";
-    //document.getElementById('2') .setAttribute('class', 'table-active')
-
 }
 
 var table = document.getElementsByTagName("table")[0];
@@ -27,7 +24,26 @@ for(var i = 1; i < cells.length; i++){
     }
 }
 
-setTimeout(function() {
-   localStorage.setItem('Grid',document.getElementById('Grid').innerHTML) 
-    window.location.href = 'List2.html'
-},10000) //функция вызова через определённое время 130000 = 130 секунды
+
+
+BtmDanger.onclick = function () {
+    var count=10
+    var counter=setInterval(timer, 1000)
+    function timer()
+    {
+     count=count-1
+     if (count <= 0)   
+     {
+       clearInterval(counter)
+        return
+     }
+  document.getElementById("timer").innerHTML=count + " сек"
+    }
+
+    table.style.visibility = "visible"
+    NextElement.style.visibility = "visible"
+    setTimeout(function() {
+        localStorage.setItem('Grid',document.getElementById('Grid').innerHTML) 
+         window.location.href = 'List2.html'
+     },10000) //функция вызова через определённое время 10000 = 10 секунды
+}

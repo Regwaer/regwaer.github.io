@@ -27,7 +27,7 @@ endTest.onclick = function () {
     // window.location.href = 'index.html'
     localStorage.setItem('p1',document.getElementById('p1').innerHTML)
     localStorage.setItem('p2',document.getElementById('p2').innerHTML)
-    
+    localStorage.setItem('test4timer',document.getElementById('timer').innerHTML)
     window.location.href = 'List5.html'
    // <button onclick="location.href='result.html?'+txt1.value+'&'+txt2.value+'&'+txt3.value"> отправить в result.html </button>
 }
@@ -37,7 +37,7 @@ endTest.onclick = function () {
 BtmDanger.onclick = function () {
     // p1.innerHTML = p1.innerHTML.split(`<span class="d-inline text-bg-warning">`).join("")
     // p2.innerHTML = p2.innerHTML.split(`<span class="d-inline text-bg-warning">`).join("")
-    var count=120
+    var count=150
     var counter=setInterval(timer, 1000)
     function timer()
     {
@@ -56,7 +56,9 @@ BtmDanger.onclick = function () {
     setTimeout(function() {
         localStorage.setItem('p1',document.getElementById('p1').innerHTML)
         localStorage.setItem('p2',document.getElementById('p2').innerHTML)
+        localStorage.setItem('test4Timer',document.getElementById('timer').innerHTML)
         window.location.href = 'List5.html'
-    },120000) //функция вызова через определённое время 120000 = 120 секунды
+    },150000) //функция вызова через определённое время 150000 = 150 секунды
+
 }
 

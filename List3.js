@@ -9,6 +9,7 @@ let mode = 'full'
 
 NextElement.onclick = function () {
     localStorage.setItem('L3p1',document.getElementById('p1').innerHTML)
+    localStorage.setItem('test3timer',document.getElementById('timer').innerHTML)
      window.location.href = 'List4.html'
 }
 p1.onmouseup = function () {
@@ -22,7 +23,7 @@ function get_selected_text() {
 }
 
 BtmDanger.onclick = function () {
-    var count=120
+    var count=150
     var counter=setInterval(timer, 1000)
     function timer()
     {
@@ -39,8 +40,9 @@ BtmDanger.onclick = function () {
     NextElement.style.visibility = "visible"
     setTimeout(function() {
         localStorage.setItem('L3p1',document.getElementById('p1').innerHTML)
+        localStorage.setItem('test3timer',document.getElementById('timer').innerHTML)
         window.location.href = 'List4.html'
-    },120000) //функция вызова через определённое время 120000 = 120 секунды
+    },150000) //функция вызова через определённое время 150000 = 150 секунды
 }
 
 

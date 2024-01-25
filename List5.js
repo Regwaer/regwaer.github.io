@@ -81,8 +81,18 @@ window.onload = function () {
     title1itog.innerHTML = 'Телефон: ' + title1
     title2itog.innerHTML = 'Дата:    ' + title2
 
+    document.getElementById('T1').innerHTML = `Тест №1 (оставшееся время ${localStorage.getItem('test1timer')})`
+    document.getElementById('T2').innerHTML = `Тест №2 (оставшееся время ${localStorage.getItem('test2timer')})`
+    document.getElementById('T3').innerHTML = `Тест №3 (оставшееся время ${localStorage.getItem('test3timer')})`
+    document.getElementById('T4').innerHTML = `Тест №4 (оставшееся время ${localStorage.getItem('test4timer')})`
+
+
     title3.innerHTML = title2 + ' ' + title
     localStorage.setItem('body1',document.getElementById('body').innerHTML)
+    
+
+
+
 }
 
 
@@ -204,59 +214,6 @@ try {
 }
 var url = URL.createObjectURL(file);
 document.getElementById('link').href = url;
+document.getElementById('link').download = title +  ".html";
 
 
-// const TIMEWEB_CLOUD_TOKEN = "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsImtpZCI6IjFrYnhacFJNQGJSI0tSbE1xS1lqIn0.eyJ1c2VyIjoiaXE4ODQ0NyIsInR5cGUiOiJhcGlfa2V5IiwicG9ydGFsX3Rva2VuIjoiNjM5MDAxYjAtN2RmZS00MGE1LTlkM2QtOGMzNzY0NzNhZGEzIiwiYXBpX2tleV9pZCI6IjZkNTM3MTAwLTQzZmEtNGNiMy04MWNmLWRmMjYzODM0YzI1NiIsImlhdCI6MTcwNTc2MjQyNH0.VTNCgEHDcpuj9plamjXEKl7y-nE7woFZfFqoavBnQBM-JdmVnPDiZCC85qUOBDu7o9Elq3fWC0un_KIXr9whqrcdgXjlvoAwDDIm82sFmawfOA0J5REG2uSvc7NYTnxQ4N93eam9BFLZ7xMnZMJqnLJokxxR3eDLOjYDlsgMD93LVaMcO9lHP7eQF1B5P7UfWgqMoP3zz6yZoLHMW4WbhrsmqtocfhiP5uk6kiFuKPDoNFJAs7RLB4H5Kv9zYt2szq0DM5wz_VBPk9VsdW35JIni-YptTNM8U7ApMLyvdm6GrAfhSyFkCy08Y0BtO0On3jPongKl0VcbNNIwgdOv812_gj4xragjp9TcpIfLsaWwU8lVMVfyqYqBd6bs7kaSwCc8D3xhYzZfvSjmye_lxRM-PVif6ZuqYNndI3THKFWMEfAuK29l26a6FvnCuph6SjllRzCEh990SHFaaSG1x7fh6ojYSFvkbcPEVddApJHub8-Mwyj8naY1fKF6g1tO"
-// const form = new FormData();
-// form.append('files', File(['<data goes here>'], 'path/to/local/file.jpg'));
-
-// fetch('https://api.timeweb.cloud/api/v1/storages/buckets/1051/object-manager/upload', {
-//     method: 'POST',
-//     headers: {
-//         'Content-Type': 'multipart/form-data',
-//         'Authorization': `Bearer ${tok}`
-//     },
-//     body: form
-// });
-
-// fetch('https://api.timeweb.cloud/api/v1/storages/buckets/1051/object-manager/list', {
-//     headers: {
-//         'Content-Type': 'application/json',
-//         'Authorization': `Bearer ${tok}`
-//     }
-// });
-
-
-// console.log(url)
-// https://api.timeweb.cloud/api/v1/storages/buckets/280717/object-manager/list
-
-// https://s3.timeweb.cloud/76714e8f-3083511d-b59d-467a-8f52-ba1bc09a277f/file.html
-
-
-// https://76714e8f-3083511d-b59d-467a-8f52-ba1bc09a277f.s3.timeweb.cloud/file.html
-
-
-// import TimewebCloudApi from 'timeweb_cloud_api';
-// let defaultClient = TimewebCloudApi.ApiClient.instance;
-// // Configure Bearer (JWT) access token for authorization: Bearer
-// let Bearer = defaultClient.authentications['Bearer'];
-// Bearer.accessToken = TIMEWEB_CLOUD_TOKEN
-
-// let apiInstance = new TimewebCloudApi.S3Api();
-// let bucketId = '76714e8f-3083511d-b59d-467a-8f52-ba1bc09a277f'; // Number | Уникальный идентификатор хранилища.
-// let copyStorageFileRequest = new TimewebCloudApi.CopyStorageFileRequest(); // CopyStorageFileRequest | 
-// apiInstance.copyStorageFile(bucketId, copyStorageFileRequest, (error, data, response) => {
-//   if (error) {
-//     console.error(error);
-//   } else {
-//     console.log('API called successfully.');
-//   }
-// });
-
-
-// fetch('https://api.timeweb.cloud/api/v1/auth/api-keys', {
-//     headers: {
-//         'Content-Type': 'application/json',
-//         'Authorization': `Bearer ${TIMEWEB_CLOUD_TOKEN}`
-//     }
-// });

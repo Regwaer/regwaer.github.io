@@ -9,6 +9,7 @@ NextElement.onclick = function () {
     localStorage.setItem('flexRadioDefault3',document.getElementById("flexRadioDefault3").checked)
     localStorage.setItem('flexRadioDefault4',document.getElementById("flexRadioDefault4").checked)
     localStorage.setItem('flexRadioDefault5',document.getElementById("flexRadioDefault5").checked)
+    localStorage.setItem('test2timer',document.getElementById('timer').innerHTML)
     window.location.href = 'List3.html'
 }
 
@@ -36,7 +37,7 @@ BtmDanger.onclick = function () {
         localStorage.setItem('flexRadioDefault3',document.getElementById("flexRadioDefault3").checked)
         localStorage.setItem('flexRadioDefault4',document.getElementById("flexRadioDefault4").checked)
         localStorage.setItem('flexRadioDefault5',document.getElementById("flexRadioDefault5").checked)
-    
+        localStorage.setItem('test2timer',document.getElementById('timer').innerHTML)
         window.location.href = 'List3.html'
     },30000) //функция вызова через определённое время 30000 = 30 секунды
 }

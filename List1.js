@@ -4,7 +4,7 @@ const BtmDanger = document.getElementById('start')
 
 NextElement.onclick = function () {
     localStorage.setItem('Grid',document.getElementById('Grid').innerHTML) 
-    
+    localStorage.setItem('test1timer',document.getElementById('timer').innerHTML)
     window.location.href = 'List2.html'
 }
 
@@ -27,7 +27,7 @@ for(var i = 1; i < cells.length; i++){
 
 
 BtmDanger.onclick = function () {
-    var count=10
+    var count=15
     var counter=setInterval(timer, 1000)
     function timer()
     {
@@ -44,6 +44,7 @@ BtmDanger.onclick = function () {
     NextElement.style.visibility = "visible"
     setTimeout(function() {
         localStorage.setItem('Grid',document.getElementById('Grid').innerHTML) 
+        localStorage.setItem('test1timer',document.getElementById('timer').innerHTML)
          window.location.href = 'List2.html'
-     },10000) //функция вызова через определённое время 10000 = 10 секунды
+     },15000) //функция вызова через определённое время 15000 = 15 секунды
 }

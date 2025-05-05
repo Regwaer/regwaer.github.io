@@ -2,36 +2,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <base href="/" />
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-     rel="stylesheet" 
-     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
-     crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="https://result.school/logo-result.school.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+          crossorigin="anonymous">
+
+    <title>Регионы</title>
+    <script  src="app.js"  defer></script>
 
 
-     <script  src="app.js"  defer></script>
-    <!--Blazor:{"type":"server","prerenderId":"f9b3355267da44bc87ff57bb2d42c287","key":{"locationHash":"77D12F14A8105320B1AAED6AE7E689DA0EC4483270A645E84079EAA0FFDF550D:0","formattedComponentKey":""},"sequence":0,"descriptor":"CfDJ8FOHSbeUVkVKli8LtI0JlV1mkK0Ot4Fx38/jOP8QTRduPh12KMlMwaKo5eLPHEn1iflGJZWr712vbXfY0OtuFobX4hrtmFHJXRxZyIHENmDIpdSYV9\u002Bm88PQF/QHD7PQRqUUKi4r22sTrHi7PF9eKlM\u002BvOAN6vvnfFcGdKUDZLDv9Y8QrmRMfhypPC2BdbdwVJ73wOhHy14mOhntph\u002BmftWAdPFD02oocIHsdcqF8MDLXhanjI2ebZ4u9niH2k1w7d5jj4P5mKsSNs8Kr0e5ZcJkYYDSzBjW9UazzCJ\u002BVKKj8j8Pnh\u002BqYel1y1eACsWP4\u002BCarJgeDgeZOw8oYpSKs9RetSIkaM8AVlWEmaZI1va\u002B4uqLUf1TizAPGbkn77HwOQ7f1GLSJ9hGG6JTQ4bo0jYnRzu11FYg4sXYdteqWZnUKp3niQWIu8SDyYL0O\u002BEBTuEd/ZcKejD\u002B8DY9UB75AldnKQxzA9iLHoPxmS0fUqW5VY3RVobjtDjE92GaLGj6VtEVJSgeJt47BsHKyNstK97RtxsNTl2lfFyL595Rsp\u002B\u002BXxFr/tiHLy2unPQo1VG6C\u002BsBqwNxKuQi/HIH/yfcWWg="}--><title>Вознесенский тракт и Шали - Бавлы</title><!--Blazor:{"prerenderId":"f9b3355267da44bc87ff57bb2d42c287"}-->
+     
 </head>
 <body>
     
-<!--Blazor:{"type":"server","prerenderId":"cdf5e8fe3d694de6af210d1000281764","key":{"locationHash":"E456C1DF2CCDD7CD302C3CBFA48867CDD190AC3822C7AA083B3C8092172F50AA:0","formattedComponentKey":""},"sequence":1,"descriptor":"CfDJ8FOHSbeUVkVKli8LtI0JlV0z7eFvE3htQkyB5Lmz6HR/k62eOgJMHf/xGgCOy53\u002Bdw/fglVvOSz7TslN6gK3MfmlzNLrK8rJZO1kx20Dvq0jyRgmNi\u002BOMIyzJJLcYImjyfC1zZD7ZWKDB5yYSea3Xh3aNgMASt2a6ZAHBPB9fgH5oWab3tKGll0HgT2jEVI9krcseX4gjJETxI0KaKn/eR5S5uLdLe3bcTAHjc2XKOaAm3eNc/KNeiGtPniAsX3Jrmk8FtfEAD3KHIktnwuwu6uwFbLKUaGcHFg9pYTeraSskdwF8CzWukBCSF1h68xu/SqHe4hItXp5IG0kF6fk8bqciHdJ64j8rP5Xn5V0nOQPr8IqxbEDpXgJkdLqCDu2jKjWBMnP1fMJVvYD0yv57wnTT29r8RnhAKChtDbMsRUg/zm4mw5GsDoi1KjQHtKku5QxXnnKjXyanM97NjgTdqo3Vbylp7KBBbrY02ZB60HHQrURLgg2MnKLuPqPntJtdA=="}-->
 
 
   <div class="content px-4"><div class="container w-90 pt-5">
     <h3 style="font-weight:bold; text-align: center;" class="text-danger"><font face="Tahoma">Самый краткий справочник регионов</font></h3>
 
-    <input type="text" class="form-control" placeholder="Ввелите Код стран, Старну или Формат номерного знака" value="" id = "input1"/>
-
-    <button type="submit" class="form-control btn btn-primary mt-2" id = "submitBtn">Искать</button>
-   
-    <table class="table table-bordered align-center border-primary mt-4" id = "Table">
+  
+    <form class="row g-3">
+        <div class="col-md-4">
+            <label  class="form-label">Код страны</label>
+            <input type="text" class="form-control" placeholder="" value="" id = "tableFilterCountryCode"/>
+        </div>
+        <div class="col-md-4">
+            <label  class="form-label">Страна</label>
+            <input type="text" class="form-control" placeholder="" value="" id = "tableFilterCountries"/>
+        </div>
+          <div class="col-md-4">
+            <label  class="form-label">Формат номерного знака</label>
+            <input type="text" class="form-control" placeholder="" value="" id = "tableFilterFormat"/>
+          </div>
+    </form>
+  
+    <table class="table table-bordered align-center border-primary mt-4" >
         <thead><tr><th scope="col" style="text-align: center;">Код стран</th>
                     <th scope="col" style="text-align: center;">Страна</th>
                     <th scope="col" style="text-align: center;">Образец номерной пластины</th>
                     <th scope="col" style="text-align: center;">Формат номерного знака</th></tr></thead>
-            <tbody><tr><td class="text-primary" style="text-align: center;">ABH</td>
+            <tbody id = "tableBody"><tr><td class="text-primary" style="text-align: center;">ABH</td>
                         <td class="text-primary" style="text-align: center;">&#x410;&#x431;&#x445;&#x430;&#x437;&#x438;&#x44F;</td>
                         <td class="text-primary" style="text-align: center;"><img width="200" height="100" src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Licence_plate_of_Abkhazia_rectangular.jpg" /></td>
                         <td class="text-primary" style="text-align: center;">&#x411;&#x426;&#x426;&#x426;&#x411;&#x411;</td></tr><tr><td class="text-primary" style="text-align: center;">ABH</td>
@@ -1260,8 +1275,6 @@
                 </table>
             </div>
         </div>
-
-
 
 
 
